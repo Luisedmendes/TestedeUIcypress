@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "54897f33-c790-4b64-8256-4092d8000d9c",
+		"name": "NP2Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31013309"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "UserDetails",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UserDetailsFailed",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": []
+		},
+		{
+			"name": "DELETE",
+			"item": []
+		}
+	]
+}
