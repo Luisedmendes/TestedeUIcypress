@@ -11,9 +11,54 @@
 			"item": [
 				{
 					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "44c9e15516ae1632440c6a735542a0728d9029473af601c49ac9e1ee0e9ea1b0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testpostman@gmail.com\",\r\n    \"name\" : \"Test\",\r\n    \"gender\": \"female\",\r\n    \"status\" : \"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
 					},
 					"response": []
 				}
@@ -24,17 +69,81 @@
 			"item": [
 				{
 					"name": "UserDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "44c9e15516ae1632440c6a735542a0728d9029473af601c49ac9e1ee0e9ea1b0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/6938277",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"6938277"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "UserDetailsFailed",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "44c9e15516ae1632440c6a735542a0728d9029473af601c49ac9e1ee0e9ea1b0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/6938278",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"6938278"
+							]
+						}
 					},
 					"response": []
 				}
