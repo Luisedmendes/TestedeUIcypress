@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "54897f33-c790-4b64-8256-4092d8000d9c",
+		"_postman_id": "ec880d6f-7117-43d2-8f60-22ad9a7392ea",
 		"name": "NP2Postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31013309"
+		"_exporter_id": "35408859"
 	},
 	"item": [
 		{
@@ -151,11 +151,29 @@
 		},
 		{
 			"name": "PUT",
-			"item": []
+			"item": [
+				{
+					"name": "UpdateUserDetails",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "DELETE",
-			"item": []
+			"item": [
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
